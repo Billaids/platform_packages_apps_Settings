@@ -15,6 +15,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- DerpFest Version -->
+    <string name="derp_version">DerpFest Build</string>
+
     <!-- Enable/Disable Screenshot sound -->
     <string name="screenshot_sound_title">Screenshot sounds</string>
 
