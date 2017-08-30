@@ -180,4 +180,7 @@ public class Settings extends SettingsActivity {
 
     public static class AmbientDisplaySettingsActivity extends SettingsActivity {}
 
+    // DerpQuest Settings
+    public static class DerpQuestSettingsActivity extends SettingsActivity {}
+
 }

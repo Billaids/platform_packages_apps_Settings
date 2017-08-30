@@ -21,6 +21,10 @@
     <!-- Enable/Disable Screenshot sound -->
     <string name="screenshot_sound_title">Screenshot sounds</string>
 
+    <!-- DerpQuest -->
+    <string name="derpquest_title">DerpQuest</string>
+    <string name="derpquest_activity_summary">In Kronic we trust...</string>
+
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the settings category for theme overlays. -->
     <string name="theme_customization_category">Theming</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize accent color. -->
