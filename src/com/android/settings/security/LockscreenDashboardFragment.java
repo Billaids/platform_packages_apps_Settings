@@ -25,6 +25,7 @@ import androidx.annotation.VisibleForTesting;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
+import com.android.settings.display.AmbientDisplayCustomPreferenceController;
 import com.android.settings.display.AmbientDisplayNotificationsPreferenceController;
 import com.android.settings.display.AmbientWakeGesturesPreferenceController;
 import com.android.settings.display.PulseOnNewTracksPreferenceController;
@@ -96,6 +97,7 @@ public class LockscreenDashboardFragment extends DashboardFragment
         use(PickupGesturePreferenceController.class).setConfig(getConfig(context));
         use(PulseOnNewTracksPreferenceController.class).setConfig(getConfig(context));
         use(AmbientWakeGesturesPreferenceController.class).setConfig(getConfig(context));
+        addPreferenceController(new AmbientDisplayCustomPreferenceController(context));
     }
 
     @Override

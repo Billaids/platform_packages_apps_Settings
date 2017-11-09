@@ -105,6 +105,10 @@
             android:defaultValue="false"
             settings:controller="com.android.settings.display.PulseOnNewTracksPreferenceController" />
 
+        <Preference
+            android:key="ambient_display_custom"
+            android:title="@string/advanced_settings" />
+
     </PreferenceCategory>
 
     <!-- Work profile settings are at the bottom with high order value to avoid users thinking that
