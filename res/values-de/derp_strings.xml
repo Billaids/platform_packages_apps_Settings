@@ -121,6 +121,9 @@
     <string name="fp_swipe_to_dismiss_notifications_title">Nach links oder rechts über den Fingerabdrucksensor wischen, um Benachrichtigungen zu schließen</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Um Benachrichtigungen zu schließen, nach links oder rechts über den Fingerabdrucksensor auf der Rückseite deines Geräts streichen.</string>
 
+    <!-- Volume link notification -->
+    <string name="volume_link_notification_title">Klingelton- und Benachrichtigungslautstärke verknüpfen</string>
+
     <!-- Three-fingers-swipe to screenshot -->
     <string name="swipe_to_screenshot_gesture_title">Swipen für Bildschirmfoto</string>
     <string name="swipe_to_screenshot_gesture_summary">Wische mit 3 Fingern über den Bildschirm nach unten, um ein Bildschirmfoto aufzunehmen</string>
