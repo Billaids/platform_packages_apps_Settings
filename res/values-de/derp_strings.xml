@@ -59,4 +59,7 @@
     <string name="adb_over_network_warning">WARNUNG: Wenn ADB übers Netzwerk aktiviert ist, kann auf Ihr Gerät von jedem verbundenen Netzwerk zugegriffen werden!\n\nDiese Funktion sollte nur verwendet werden, wenn Sie sich in einem vertrauenswürdigen Netzwerk befinden.\n\nMöchten Sie diese Funktion trotzdem aktivieren?</string>
     <string name="adb_over_network_warning_title">ADB über Netzwerk erlauben?</string>
 
+    <!-- Density category -->
+    <string name="density_category">Displayauflösung</string>
+
 </resources>
