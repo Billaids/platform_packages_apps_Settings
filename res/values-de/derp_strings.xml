@@ -76,4 +76,11 @@
     <!-- Density category -->
     <string name="density_category">Displayauflösung</string>
 
+    <!-- Torch Power button gestures -->
+    <string name="double_tap_power_flashlight_screen_title">Taschenlampe aktivieren</string>
+    <string name="double_tap_power_flashlight_title">Taschenlampe über Ein-/Aus-Taste bei ausgeschaltetem Display</string>
+    <string name="torch_power_button_gesture_none">Deaktiviert</string>
+    <string name="torch_power_button_gesture_dt">Ein-/Aus-Taste doppelt drücken um Taschenlampe einzuschalten</string>
+    <string name="torch_power_button_gesture_lp">Ein-/Aus-Taste lange drücken um Taschenlampe einzuschalten</string>
+
 </resources>
