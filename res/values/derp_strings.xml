@@ -153,4 +153,8 @@
     <string name="theme_select_title">Themes</string>
     <string name="theme_select_summary">Browse and select installed themes</string>
 
+    <!-- Device Parts -->
+    <string name="device_part_title">Device features</string>
+    <string name="device_part_summary">Device specific features</string>
+
 </resources>

@@ -150,4 +150,8 @@
     <string name="theme_select_title">Themen</string>
     <string name="theme_select_summary">Installierte Themen durchstöbern und auswählen</string>
 
+    <!-- Device Parts -->
+    <string name="device_part_title">Gerätefunktionen</string>
+    <string name="device_part_summary">Gerätespezifische Funktionen</string>
+
 </resources>
