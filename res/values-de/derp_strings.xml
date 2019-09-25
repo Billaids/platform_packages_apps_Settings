@@ -77,6 +77,12 @@
     <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
 
+    <!-- SELinux Status -->
+    <string name="selinux_status">SELinux-Status</string>
+    <string name="selinux_status_disabled">Deaktiviert</string>
+    <string name="selinux_status_permissive">Permissive</string>
+    <string name="selinux_status_enforcing">Enforcing</string>
+
     <!-- Adb over Network -->
     <string name="adb_over_network">ADB über Netzwerk</string>
     <string name="adb_over_network_summary">TCP/IP-Debugging über Netzwerkschnittstellen (WLAN, USB-Netzwerke) aktivieren. Diese Einstellung wird beim Neustart zurückgesetzt</string>
