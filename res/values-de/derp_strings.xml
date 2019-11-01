@@ -83,4 +83,9 @@
     <string name="torch_power_button_gesture_dt">Ein-/Aus-Taste doppelt drücken um Taschenlampe einzuschalten</string>
     <string name="torch_power_button_gesture_lp">Ein-/Aus-Taste lange drücken um Taschenlampe einzuschalten</string>
 
+    <!-- Volume rocker gestures -->
+    <string name="volume_skiptrack_screen_title">Überspringen von Songtiteln</string>
+    <string name="volume_skiptrack_title">Lautstärkeregler zum Überspringen von Titel</string>
+    <string name="volume_skiptrack_summary">Lange auf die Lautstärkewippe drücken, um zum nächsten Songtitel zu springen. Das geht auch ferngesteuert über Fernseher oder PC mit z.B. mit Spotify (App muss auf dem Telefon ausgeführt werden und die Benachrichtigung anzeigen).</string>
+
 </resources>
