@@ -21,4 +21,8 @@
     <string name="ambient_display_always_title">Immer</string>
     <string name="ambient_display_screen_summary">Zeit, Benachrichtigungssymbole und andere Informationen anzeigen</string>
 
+    <!-- Notifications while screen on -->
+    <string name="notification_sound_vib_screen_on_title">Laute Benachrichtigungen</string>
+    <string name="notification_sound_vib_screen_on_summary">Wiedergabe von Ton und Vibration für Benachrichtigungen bei eingeschaltetem Bildschirm</string>
+
 </resources>
