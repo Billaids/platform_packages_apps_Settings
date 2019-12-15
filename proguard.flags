@@ -69,3 +69,4 @@
 
 # DerpQuest
 -keep class com.derpquest.settings.**
+-keep class com.google.**
