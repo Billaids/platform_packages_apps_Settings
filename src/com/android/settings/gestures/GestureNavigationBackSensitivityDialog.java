@@ -37,8 +37,10 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
     private static final String TAG = "GestureNavigationBackSensitivityDialog";
     private static final String KEY_BACK_SENSITIVITY = "back_sensitivity";
     private static final String KEY_PILL = "pill";
+    private static final String KEY_BACK_DEAD_Y_ZONE = "back_dead_y_zone";
 
-    public static void show(SystemNavigationGestureSettings parent, int sensitivity, boolean pill) {
+    public static void show(SystemNavigationGestureSettings parent, int sensitivity, boolean pill,
+            int backDeadYZoneMode) {
         if (!parent.isAdded()) {
             return;
         }
@@ -48,6 +50,7 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
         final Bundle bundle = new Bundle();
         bundle.putInt(KEY_BACK_SENSITIVITY, sensitivity);
         bundle.putBoolean(KEY_PILL, pill);
+        bundle.putInt(KEY_BACK_DEAD_Y_ZONE, backDeadYZoneMode);
         dialog.setArguments(bundle);
         dialog.setTargetFragment(parent, 0);
         dialog.show(parent.getFragmentManager(), TAG);
@@ -62,21 +65,27 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final View view = getActivity().getLayoutInflater().inflate(
                 R.layout.dialog_back_gesture_sensitivity, null);
-        final SeekBar seekBar = view.findViewById(R.id.back_sensitivity_seekbar);
+        final SeekBar sensitivitySeekBar = view.findViewById(R.id.back_sensitivity_seekbar);
         final Switch pillSwitch = view.findViewById(R.id.pill_switch);
-        seekBar.setProgress(getArguments().getInt(KEY_BACK_SENSITIVITY));
+        final SeekBar backDeadzoneSeekbar = view.findViewById(R.id.back_deadzone_seekbar);
+        sensitivitySeekBar.setProgress(getArguments().getInt(KEY_BACK_SENSITIVITY));
         pillSwitch.setChecked(getArguments().getBoolean(KEY_PILL));
+        backDeadzoneSeekbar.setProgress(getArguments().getInt(KEY_BACK_DEAD_Y_ZONE));
         return new AlertDialog.Builder(getContext())
-                .setTitle(R.string.back_sensitivity_dialog_title)
-                .setMessage(R.string.back_sensitivity_dialog_message)
+                .setTitle(R.string.back_sensitivity_dialog_title_cust)
+                .setMessage(R.string.back_sensitivity_dialog_message_cust)
                 .setView(view)
                 .setPositiveButton(R.string.okay, (dialog, which) -> {
-                    int sensitivity = seekBar.getProgress();
+                    int sensitivity = sensitivitySeekBar.getProgress();
                     boolean pill = pillSwitch.isChecked();
                     getArguments().putInt(KEY_BACK_SENSITIVITY, sensitivity);
                     getArguments().putBoolean(KEY_PILL, pill);
                     SystemNavigationGestureSettings.setBackSensitivity(getActivity(),
                             getOverlayManager(), sensitivity, pill);
+                    int backDeadYZoneMode = backDeadzoneSeekbar.getProgress();
+                    getArguments().putInt(KEY_BACK_DEAD_Y_ZONE, backDeadYZoneMode);
+                    SystemNavigationGestureSettings.setBackDeadYZone(getActivity(),
+                            backDeadYZoneMode);
                 })
                 .create();
     }

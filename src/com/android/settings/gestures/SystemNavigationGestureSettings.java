@@ -68,6 +68,7 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment {
     static final String SHARED_PREFERENCES_NAME = "system_navigation_settings_preferences";
     @VisibleForTesting
     static final String PREFS_BACK_SENSITIVITY_KEY = "system_navigation_back_sensitivity";
+    static final String PREFS_BACK_DEAD_Y_ZONE_KEY = "system_navigation_back_sensitivity";
 
     static final String PREFS_PILL = "system_navigation_pill";
 
@@ -179,7 +180,8 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment {
             final boolean pill = getGesturalOverlayPillEnabled(getContext());
             p.setExtraWidgetVisibility(EXTRA_WIDGET_VISIBILITY_SETTING);
             p.setExtraWidgetOnClickListener((v) -> GestureNavigationBackSensitivityDialog
-                    .show(this, getBackSensitivity(getContext(), mOverlayManager, pill), pill));
+                    .show(this, getBackSensitivity(getContext(), mOverlayManager, pill), pill,
+                            getBackDeadZoneMode(getContext())));
         } else {
             p.setExtraWidgetVisibility(EXTRA_WIDGET_VISIBILITY_GONE);
         }
@@ -257,6 +259,19 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment {
                     ? BACK_GESTURE_INSET_OVERLAYS[sensitivity]
                     : BACK_GESTURE_INSET_OVERLAYS_NOPILL[sensitivity]);
         }
+    }
+
+    static int getBackDeadZoneMode(Context context) {
+        int value = Settings.System.getIntForUser(context.getContentResolver(),
+                Settings.System.EDGE_GESTURE_Y_DEAD_ZONE, 0,
+                USER_CURRENT);
+        return value;
+    }
+
+    static void setBackDeadYZone(Context context, int backDeadYZoneMode) {
+        Settings.System.putIntForUser(context.getContentResolver(),
+                Settings.System.EDGE_GESTURE_Y_DEAD_ZONE, backDeadYZoneMode,
+                USER_CURRENT);
     }
 
     @VisibleForTesting
