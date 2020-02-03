@@ -25,4 +25,8 @@
     <string name="notification_sound_vib_screen_on_title">Laute Benachrichtigungen</string>
     <string name="notification_sound_vib_screen_on_summary">Wiedergabe von Ton und Vibration für Benachrichtigungen bei eingeschaltetem Bildschirm</string>
 
+    <!-- Pulse ambient display when new music track is played -->
+    <string name="pulse_on_new_tracks_title">Ambient Music Ticker</string>
+    <string name="pulse_on_new_tracks_summary">Ambient Display anzeigen, wenn ein neuer Songtitel abgespielt wird. Um zum nächsten Titel zu springen, auf die Titelinformationen doppeltippen.</string>
+
 </resources>
