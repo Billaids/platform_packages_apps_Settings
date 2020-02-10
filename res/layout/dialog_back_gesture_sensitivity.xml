@@ -22,6 +22,16 @@
     android:orientation="vertical"
     android:padding="12dp">
 
+    <TextView
+        android:id="@+id/sensitivity_seekbar_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="12dp"
+        android:gravity="start"
+        android:textAppearance="?android:attr/textAppearance"
+        android:text="@string/back_sensitivity_dialog_sensitivity_message" />
+
     <SeekBar
         android:id="@+id/back_sensitivity_seekbar"
         android:layout_width="match_parent"
@@ -37,7 +47,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="2dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="15dp">
 
         <TextView android:id="@+id/low_tick"
                   android:layout_width="match_parent"
@@ -65,12 +75,21 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/deadzone_seekbar_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="12dp"
+        android:gravity="start"
+        android:textAppearance="?android:attr/textAppearance"
+        android:text="@string/back_sensitivity_dialog_deadzone_message" />
+
     <SeekBar
         android:id="@+id/back_deadzone_seekbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:min="0"
         android:max="3"
         style="@android:style/Widget.Material.SeekBar.Discrete"
@@ -81,7 +100,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="2dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="15dp">
 
         <TextView android:id="@+id/smallest_tick"
                   android:layout_width="match_parent"
