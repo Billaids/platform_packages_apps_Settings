@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.os.ServiceManager;
 import android.view.View;
 import android.widget.SeekBar;
+import android.widget.Switch;
 
 import com.android.settings.R;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
@@ -35,8 +36,9 @@ import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFragment {
     private static final String TAG = "GestureNavigationBackSensitivityDialog";
     private static final String KEY_BACK_SENSITIVITY = "back_sensitivity";
+    private static final String KEY_PILL = "pill";
 
-    public static void show(SystemNavigationGestureSettings parent, int sensitivity) {
+    public static void show(SystemNavigationGestureSettings parent, int sensitivity, boolean pill) {
         if (!parent.isAdded()) {
             return;
         }
@@ -45,6 +47,7 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
                 new GestureNavigationBackSensitivityDialog();
         final Bundle bundle = new Bundle();
         bundle.putInt(KEY_BACK_SENSITIVITY, sensitivity);
+        bundle.putBoolean(KEY_PILL, pill);
         dialog.setArguments(bundle);
         dialog.setTargetFragment(parent, 0);
         dialog.show(parent.getFragmentManager(), TAG);
@@ -60,16 +63,20 @@ public class GestureNavigationBackSensitivityDialog extends InstrumentedDialogFr
         final View view = getActivity().getLayoutInflater().inflate(
                 R.layout.dialog_back_gesture_sensitivity, null);
         final SeekBar seekBar = view.findViewById(R.id.back_sensitivity_seekbar);
+        final Switch pillSwitch = view.findViewById(R.id.pill_switch);
         seekBar.setProgress(getArguments().getInt(KEY_BACK_SENSITIVITY));
+        pillSwitch.setChecked(getArguments().getBoolean(KEY_PILL));
         return new AlertDialog.Builder(getContext())
                 .setTitle(R.string.back_sensitivity_dialog_title)
                 .setMessage(R.string.back_sensitivity_dialog_message)
                 .setView(view)
                 .setPositiveButton(R.string.okay, (dialog, which) -> {
                     int sensitivity = seekBar.getProgress();
+                    boolean pill = pillSwitch.isChecked();
                     getArguments().putInt(KEY_BACK_SENSITIVITY, sensitivity);
+                    getArguments().putBoolean(KEY_PILL, pill);
                     SystemNavigationGestureSettings.setBackSensitivity(getActivity(),
-                            getOverlayManager(), sensitivity);
+                            getOverlayManager(), sensitivity, pill);
                 })
                 .create();
     }

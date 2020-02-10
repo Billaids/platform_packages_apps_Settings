@@ -36,4 +36,7 @@
     <string name="ambient_wake_gestures_title">Ambient wake gestures</string>
     <string name="ambient_wake_gestures_summary">Show ambient display instead of lockscreen when using wake gestures</string>
 
+    <!-- Gesture bar settings -->
+    <string name="show_gesture_bar_title">Show gesture bar at the bottom of the screen</string>
+
 </resources>
