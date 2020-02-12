@@ -28,8 +28,6 @@
     <string name="derpquest_title">DerpQuest</string>
     <string name="derpquest_activity_summary">Wir vertrauen auf Kronic...</string>
 
-    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the settings category for theme overlays. -->
-    <string name="theme_customization_category">Designs</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize accent color. -->
     <string name="theme_customization_accent_color_title">Akzentfarbe</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
@@ -118,5 +116,10 @@
     <!-- Swipe fp to dismiss notifications -->
     <string name="fp_swipe_to_dismiss_notifications_title">Nach links oder rechts über den Fingerabdrucksensor wischen, um Benachrichtigungen zu schließen</string>
     <string name="fp_swipe_to_dismiss_notifications_summary">Um Benachrichtigungen zu schließen, nach links oder rechts über den Fingerabdrucksensor auf der Rückseite deines Geräts streichen.</string>
+
+    <!-- Themes -->
+    <string name="theme_category">Designs</string>
+    <string name="theme_select_title">Themen</string>
+    <string name="theme_select_summary">Installierte Themen durchstöbern und auswählen</string>
 
 </resources>

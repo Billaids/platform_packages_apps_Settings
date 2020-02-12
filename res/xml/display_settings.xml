@@ -31,15 +31,6 @@
         <intent android:action="com.android.intent.action.SHOW_BRIGHTNESS_DIALOG" />
     </com.android.settingslib.RestrictedPreference>
 
-    <com.android.settings.display.darkmode.DarkModePreference
-        android:key="dark_ui_mode"
-        android:title="@string/dark_ui_mode"
-        android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
-        android:widgetLayout="@null"
-        settings:widgetLayout="@null"
-        settings:controller="com.android.settings.display.DarkUIPreferenceController"
-        settings:searchable="false"/>
-
     <com.android.settings.display.NightDisplayPreference
         android:key="night_display"
         android:title="@string/night_display_title"
@@ -161,9 +152,27 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:key="theme_customization_category"
-        android:title="@string/theme_customization_category"
-        android:order="1200"> <!-- Incremented by 100 from last order (i.e. 1100) -->
+        android:key="theme_category"
+        android:title="@string/theme_category">
+
+        <com.android.settings.display.darkmode.DarkModePreference
+            android:key="dark_ui_mode"
+            android:title="@string/dark_ui_mode"
+            android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
+            android:widgetLayout="@null"
+            settings:widgetLayout="@null"
+            settings:controller="com.android.settings.display.DarkUIPreferenceController"
+            settings:searchable="false"/>
+
+        <Preference
+            android:key="theme_select_activity"
+            android:title="@string/theme_select_title"
+            android:summary="@string/theme_select_summary"
+            android:persistent="false" >
+            <intent android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.android.customization"
+                    android:targetClass="com.android.customization.picker.CustomizationPickerActivity" />
+        </Preference>
 
         <ListPreference
             android:key="android.theme.customization.accent_color"
