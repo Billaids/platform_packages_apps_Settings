@@ -80,6 +80,10 @@
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="device">Suchen Sie den Fingerabdrucksensor auf der <xliff:g id="sensor_location">%1$s</xliff:g> Ihres Geräts.</string>
     <string name="security_settings_fingerprint_enroll_find_sensor_message_cm" product="default">Suchen Sie den Fingerabdrucksensor auf der <xliff:g id="sensor_location">%1$s</xliff:g> des Geräts.</string>
 
+    <!-- Twilight -->
+    <string name="unknown_night_light_time">Unbekannt - zum Aktualisieren drücken</string>
+    <string name="night_display_location_text">\n\nDer Zeitplan von Sonnenuntergang bis Sonnenaufgang erfordert aktivierte Standortdienste, um die richtigen Zeiten für Ihren Standort zu erhalten.</string>
+
     <!-- Fingerprint sensor locations -->
     <string name="security_settings_fingerprint_sensor_location_back">Rückseite</string>
     <string name="security_settings_fingerprint_sensor_location_front">Front</string>
