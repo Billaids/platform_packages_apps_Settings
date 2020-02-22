@@ -46,4 +46,7 @@
     <string name="back_sensitivity_dialog_sensitivity_message">Adjust back swipe sensitivity</string>
     <string name="back_sensitivity_dialog_deadzone_message">Adjust the area of the screen where the back swipe can be triggered</string>
 
+    <!-- Button to open advanced power usage -->
+    <string name="battery_header_advanced_usage_button">Advanced usage</string>
+
 </resources>

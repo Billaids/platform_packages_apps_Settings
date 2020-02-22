@@ -43,4 +43,7 @@
     <string name="back_sensitivity_dialog_sensitivity_message">Einstellung der Empfindlichkeit für den Rückwärtswisch</string>
     <string name="back_sensitivity_dialog_deadzone_message">Stellen Sie den Bereich des Bildschirms ein, in dem der Rückwärtswisch ausgelöst werden kann</string>
 
+    <!-- Button to open advanced power usage -->
+    <string name="battery_header_advanced_usage_button">Erweiterte Nutzung</string>
+
 </resources>
