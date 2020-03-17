@@ -157,4 +157,7 @@
     <string name="device_part_title">Device features</string>
     <string name="device_part_summary">Device specific features</string>
 
+    <!-- Notification log --> 
+    <string name="notification_log_summary">Show notifications history log</string>
+
 </resources>

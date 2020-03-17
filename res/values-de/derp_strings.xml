@@ -154,4 +154,7 @@
     <string name="device_part_title">Gerätefunktionen</string>
     <string name="device_part_summary">Gerätespezifische Funktionen</string>
 
+    <!-- Notification log --> 
+    <string name="notification_log_summary">Benachrichtigungsprotokoll anzeigen</string>
+
 </resources>
