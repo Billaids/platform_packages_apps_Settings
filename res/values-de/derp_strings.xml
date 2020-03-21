@@ -130,7 +130,7 @@
 
     <!-- DT2S on statusbar -->
     <string name="double_tap_to_sleep_title">Statusleiste doppeltippen für Ruhemodus</string>
-    <string name="double_tap_to_sleep_summary">Die Statusleiste doppelt antippen, um das Gerät in den Ruhemodus zu versetzen</string>>
+    <string name="double_tap_to_sleep_summary">Die Statusleiste doppelt antippen, um das Gerät in den Ruhemodus zu versetzen</string>
 
     <!-- Long swipe gestures -->
     <string name="navbar_gesture_tweaks_pref_title">Erweiterte Gesten</string>
